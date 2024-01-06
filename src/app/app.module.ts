@@ -9,23 +9,20 @@ import { ProjectModule } from './modules/user/project/project.module';
 import { DocumentationModule } from './modules/user/documentation/documentation.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppService } from './app.service';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UserLayoutComponent,
-  ],
+  declarations: [AppComponent, UserLayoutComponent],
   imports: [
     FontAwesomeModule,
     BrowserModule,
     AppRoutingModule,
     HomeModule,
     ProjectModule,
-    DocumentationModule
+    DocumentationModule,
+    SwiperModule,
   ],
-  providers: [
-    AppService
-  ],
-  bootstrap: [AppComponent]
+  providers: [AppService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
