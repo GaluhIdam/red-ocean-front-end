@@ -1,18 +1,60 @@
-<div class="grid grid-cols-1 gap-4 place-items-center min-[1090px]:my-28">
-  <div class="flex min-[1435px]:flex-row flex-col justify-between w-full min-[1435px]:px-12 px-5 min-[1090px]:my-10 mt-10 h-fit">
+<div class="grid grid-cols-1 gap-4 place-items-center min-[1090px]:mt-8 mb-5">
+  <div
+    class="flex min-[1435px]:flex-row flex-col justify-between w-full min-[1435px]:px-12 px-5 min-[1090px]:my-10 mt-10 h-fit">
 
-    <div class="h-fit self-center w-full min-[1435px]:mr-10">
+    <div class="h-fit w-full min-[1435px]:mr-10">
       <h1 class="min-[1435px]:text-9xl text-6xl font-bold text-red-ocean">Project</h1>
       <h1 class="min-[1435px]:text-9xl text-6xl font-bold text-blue-ocean">Showcase</h1>
       <div class="min-[1435px]:w-[40rem] mt-8">
-        <p class="text-navy-ocean min-[1435px]:text-xl text-sm dark:text-white">Lorem ipsum, atau ringkasnya lipsum, adalah teks standar yang
+        <p class="text-navy-ocean min-[1435px]:text-xl text-sm dark:text-white">Lorem ipsum, atau ringkasnya lipsum,
+          adalah teks standar yang
           ditempatkan
           untuk
           mendemostrasikan elemen grafis
           atau
           presentasi visual seperti font, tipografi, dan tata letak.</p>
       </div>
-      <div class="flex flex-row max-[1435px]:justify-center bg-white h-fit shadow-lg p-5 rounded-2xl mt-8 min-[1435px]:w-fit">
+      <div class="min-[1435px]:hidden overflow-hidden rounded-3xl mt-5">
+        <swiper [config]="swiperConfig">
+          <ng-template swiperSlide>
+            <div class="overflow-hidden rounded-3xl group shadow-lg">
+              <img src="../../../../../../assets/project-hero.png"
+                class="w-full object-cover rounded-3xl transition duration-300 ease-in-out group-hover:scale-125"
+                alt="hero">
+            </div>
+          </ng-template>
+          <ng-template swiperSlide>
+            <div class="overflow-hidden rounded-3xl group shadow-lg">
+              <img src="../../../../../../assets/project-showcase-1.jpg"
+                class="w-full object-cover rounded-3xl transition duration-300 ease-in-out group-hover:scale-125"
+                alt="hero">
+            </div>
+          </ng-template>
+          <ng-template swiperSlide>
+            <div class="overflow-hidden rounded-3xl group shadow-lg">
+              <img src="../../../../../../assets/project-showcase-2.jpg"
+                class="w-full object-cover rounded-3xl transition duration-300 ease-in-out group-hover:scale-125"
+                alt="hero">
+            </div>
+          </ng-template>
+          <ng-template swiperSlide>
+            <div class="overflow-hidden rounded-3xl group shadow-lg">
+              <img src="../../../../../../assets/project-hero.png"
+                class="w-full object-cover rounded-3xl transition duration-300 ease-in-out group-hover:scale-125"
+                alt="hero">
+            </div>
+          </ng-template>
+
+          <!-- Add navigation buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <!-- Add pagination -->
+          <div class="swiper-pagination"></div>
+        </swiper>
+      </div>
+      <div
+        class="flex flex-row max-[1435px]:justify-center bg-white h-fit shadow-lg p-5 rounded-2xl mt-8 min-[1435px]:w-fit">
         <div class="max-[1435px]:text-center flex min-[1435px]:flex-row flex-col w-full">
           <div class="flex flex-row min-[1435px]:w-[500px]">
             <div class="max-[1435px]:mx-2 mr-5 max-[1435px]:w-full">
@@ -24,7 +66,8 @@
               <h1 class="text-red-ocean font-bold text-xl">5 Project</h1>
             </div>
           </div>
-          <input type="text" class="max-[1435px]:py-3 max-[1435px]:my-5 outline-none shadow-inner rounded-full px-5 w-full min-[1435px]:mx-2"
+          <input type="text"
+            class="max-[1435px]:py-3 max-[1435px]:my-5 outline-none shadow-inner rounded-full px-5 w-full min-[1435px]:mx-2"
             placeholder="search project...">
           <button type="button"
             class="w-fit rounded-full px-8 py-1 bg-red-ocean text-white shadow hover:bg-dark-red-ocean font-bold self-center min-[1435px]:ml-5 h-full">Search</button>
@@ -32,30 +75,30 @@
       </div>
     </div>
 
-    <div class="max-[1435px]:hidden w-[80rem] h-[30rem] overflow-hidden rounded-3xl">
+    <div class="max-[1435px]:hidden overflow-hidden rounded-3xl">
       <swiper [config]="swiperConfig">
-        <ng-template swiperSlide class="h-[40rem]">
+        <ng-template swiperSlide class="h-[30rem]">
           <div class="h-[30rem] overflow-hidden rounded-3xl group shadow-lg">
             <img src="../../../../../../assets/project-hero.png"
               class="w-full object-cover rounded-3xl h-[30rem] transition duration-300 ease-in-out group-hover:scale-125"
               alt="hero">
           </div>
         </ng-template>
-        <ng-template swiperSlide class="h-[40rem]">
+        <ng-template swiperSlide class="h-[30rem]">
           <div class="h-[30rem] overflow-hidden rounded-3xl group shadow-lg">
             <img src="../../../../../../assets/project-showcase-1.jpg"
               class="w-full object-cover rounded-3xl h-[30rem] transition duration-300 ease-in-out group-hover:scale-125"
               alt="hero">
           </div>
         </ng-template>
-        <ng-template swiperSlide class="h-[40rem]">
+        <ng-template swiperSlide class="h-[30rem]">
           <div class="h-[30rem] overflow-hidden rounded-3xl group shadow-lg">
             <img src="../../../../../../assets/project-showcase-2.jpg"
               class="w-full object-cover rounded-3xl h-[30rem] transition duration-300 ease-in-out group-hover:scale-125"
               alt="hero">
           </div>
         </ng-template>
-        <ng-template swiperSlide class="h-[40rem]">
+        <ng-template swiperSlide class="h-[30rem]">
           <div class="h-[30rem] overflow-hidden rounded-3xl group shadow-lg">
             <img src="../../../../../../assets/project-hero.png"
               class="w-full object-cover rounded-3xl h-[30rem] transition duration-300 ease-in-out group-hover:scale-125"
