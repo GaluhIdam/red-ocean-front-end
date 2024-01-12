@@ -10,6 +10,7 @@ import { DocumentationModule } from './modules/user/documentation/documentation.
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppService } from './app.service';
 import { SwiperModule } from 'swiper/angular';
+import { SharedModule } from './shared/components/shared.module';
 
 @NgModule({
   declarations: [AppComponent, UserLayoutComponent],
@@ -20,6 +21,7 @@ import { SwiperModule } from 'swiper/angular';
     HomeModule,
     ProjectModule,
     DocumentationModule,
+    SharedModule,
     SwiperModule,
   ],
   providers: [AppService],

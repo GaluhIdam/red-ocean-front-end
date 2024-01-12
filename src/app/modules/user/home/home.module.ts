@@ -7,7 +7,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ProjectShowcaseComponent } from './components/project-showcase/project-showcase.component';
 import { LatestDocumentationComponent } from './components/latest-documentation/latest-documentation.component';
-
+import { SharedModule } from 'src/app/shared/components/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,9 +17,6 @@ import { LatestDocumentationComponent } from './components/latest-documentation/
     ProjectShowcaseComponent,
     LatestDocumentationComponent,
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule
-  ]
+  imports: [CommonModule, HomeRoutingModule, SharedModule],
 })
-export class HomeModule { }
+export class HomeModule {}

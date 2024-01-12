@@ -1,0 +1,16 @@
+<!-- card -->
+<div class="bg-cover bg-center bg-opacity-50 group" [style.backgroundImage]="'url(' + bgProject + ')'">
+  <div class="h-72">
+  </div>
+  <div [ngClass]="['rounded-t-3xl', bgColor, 'opacity-90', 'p-8', 'h-64']">
+    <h1
+      class="text-white font-bold text-2xl transition-transform ease-in-out group-hover:transform group-hover:scale-110 text-center min-[1435px]:h-[64px]">
+      {{ title | truncate:30 }}</h1>
+    <p class="text-white mt-3 text-center text-wrap">{{ description | truncate:80 }}</p>
+    <a [routerLink]="link"
+      class="text-center mt-5 text-white text-sm hover:underline hover:underline-offset-4 hover:font-bold">
+      <p class="mt-5">See more ></p>
+    </a>
+  </div>
+</div>
+<!-- card -->

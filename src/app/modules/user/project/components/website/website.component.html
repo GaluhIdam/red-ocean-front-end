@@ -1,102 +1,17 @@
-<div class="mb-5">
-  <div class="flex flex-row place-content-center min-[1435px]:py-14 mt-16 mb-10">
-    <div class="text-center w-[380px]">
-      <h1 class="text-navy-ocean min-[1435px]:text-3xl text-2xl font-bold mb-1 dark:text-white">Website</h1>
-      <p class="text-navy-ocean dark:text-white max-[1435px]:text-sm">Lorem Ipsum is simply dummy text of the printing
-        and typesetting
-        industry.
-      </p>
-    </div>
-  </div>
+<div class="mt-24">
+  <app-header-section [title]="'Website'"
+    [description]="'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'"></app-header-section>
 </div>
 
-<div class="mx-5 grid min-[1435px]:grid-cols-4 gap-4 max-[1435px]:grid-cols-2">
+<div class="mx-5 grid min-[1435px]:grid-cols-4 min-[1435px]:gap-6 gap-4 max-[1435px]:grid-cols-2 min-[1435px]:px-8">
   <!-- card -->
-  <div class="bg-cover bg-center bg-opacity-50 group shadow-lg rounded-3xl"
-    style="background-image: url(../../../../assets/project-showcase-1.jpg);">
-    <div class="min-[1435px]:h-72 h-36">
-    </div>
-    <div class="rounded-3xl bg-red-ocean opacity-90 min-[1435px]:p-8 p-4">
-      <h1
-        class="text-white font-bold min-[1435px]:text-xl text-sm transition-transform ease-in-out group-hover:transform group-hover:scale-110 text-center min-[1435px]:h-[54px] max-[1435px]:h-[34px]">
-        Nex Knowledge Management</h1>
-      <p class="text-white mt-3 text-center text-wrap max-[1435px]:hidden">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-        Aenean commodo
-        ligula eget
-        dolor. Aenean massa. Cum
-        sociis
-        natoque penatibus et</p>
-      <a routerLink="/"
-        class="text-center mt-5 text-white min-[1435px]:text-sm text-xs hover:underline hover:underline-offset-4 hover:font-bold">
-        <p class="mt-5">See more ></p>
-      </a>
-    </div>
-  </div>
+  <app-card-project-stack *ngFor="let data of project" [bgProject]="data.bgProject" [title]="data.title"
+    [bgColor]="'bg-red-ocean'" [description]="data.description" [link]="data.link"
+    [stackTech]="data.stackTech"></app-card-project-stack>
   <!-- card -->
-  <!-- card -->
-  <div class="bg-cover bg-center bg-opacity-50 group shadow-lg rounded-3xl"
-    style="background-image: url(../../../../assets/project-showcase-1.jpg);">
-    <div class="min-[1435px]:h-72 h-36">
-    </div>
-    <div class="rounded-3xl bg-red-ocean opacity-90 min-[1435px]:p-8 p-4">
-      <h1
-        class="text-white font-bold min-[1435px]:text-xl text-sm transition-transform ease-in-out group-hover:transform group-hover:scale-110 text-center min-[1435px]:h-[54px] max-[1435px]:h-[34px]">
-        Nex Knowledge Management</h1>
-      <p class="text-white mt-3 text-center text-wrap max-[1435px]:hidden">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-        Aenean commodo
-        ligula eget
-        dolor. Aenean massa. Cum
-        sociis
-        natoque penatibus et</p>
-      <a routerLink="/"
-        class="text-center mt-5 text-white min-[1435px]:text-sm text-xs hover:underline hover:underline-offset-4 hover:font-bold">
-        <p class="mt-5">See more ></p>
-      </a>
-    </div>
-  </div>
-  <!-- card -->
-  <!-- card -->
-  <div class="bg-cover bg-center bg-opacity-50 group shadow-lg rounded-3xl"
-    style="background-image: url(../../../../assets/project-showcase-1.jpg);">
-    <div class="min-[1435px]:h-72 h-36">
-    </div>
-    <div class="rounded-3xl bg-red-ocean opacity-90 min-[1435px]:p-8 p-4">
-      <h1
-        class="text-white font-bold min-[1435px]:text-xl text-sm transition-transform ease-in-out group-hover:transform group-hover:scale-110 text-center min-[1435px]:h-[54px] max-[1435px]:h-[34px]">
-        Nex Knowledge Management</h1>
-      <p class="text-white mt-3 text-center text-wrap max-[1435px]:hidden">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-        Aenean commodo
-        ligula eget
-        dolor. Aenean massa. Cum
-        sociis
-        natoque penatibus et</p>
-      <a routerLink="/"
-        class="text-center mt-5 text-white min-[1435px]:text-sm text-xs hover:underline hover:underline-offset-4 hover:font-bold">
-        <p class="mt-5">See more ></p>
-      </a>
-    </div>
-  </div>
-  <!-- card -->
-  <!-- card -->
-  <div class="bg-cover bg-center bg-opacity-50 group shadow-lg rounded-3xl"
-    style="background-image: url(../../../../assets/project-showcase-1.jpg);">
-    <div class="min-[1435px]:h-72 h-36">
-    </div>
-    <div class="rounded-3xl bg-red-ocean opacity-90 min-[1435px]:p-8 p-4">
-      <h1
-        class="text-white font-bold min-[1435px]:text-xl text-sm transition-transform ease-in-out group-hover:transform group-hover:scale-110 text-center min-[1435px]:h-[54px] max-[1435px]:h-[34px]">
-        SP Document</h1>
-      <p class="text-white mt-3 text-center text-wrap max-[1435px]:hidden">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-        Aenean commodo
-        ligula eget
-        dolor. Aenean massa. Cum
-        sociis
-        natoque penatibus et</p>
-      <a routerLink="/"
-        class="text-center mt-5 text-white min-[1435px]:text-sm text-xs hover:underline hover:underline-offset-4 hover:font-bold">
-        <p class="mt-5">See more ></p>
-      </a>
-    </div>
-  </div>
-  <!-- card -->
+</div>
+<div class="mt-10 flex flex-row justify-center">
+  <button type="button"
+    class="text-center border border-1 border-red-ocean text-red-ocean rounded-lg px-5 py-2 hover:bg-red-ocean hover:text-white">Load
+    More</button>
 </div>

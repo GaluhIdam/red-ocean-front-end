@@ -1,0 +1,20 @@
+<div class="bg-cover bg-center bg-opacity-50 group shadow-lg rounded-3xl"
+  [style.backgroundImage]="'url(' + bgProject + ')'">
+  <div class="min-[1435px]:h-72 h-36">
+  </div>
+  <div [ngClass]="['rounded-3xl', bgColor, 'opacity-90', 'min-[1435px]:p-8 p-4']">
+    <h1
+      class="text-white font-bold min-[1435px]:text-xl text-sm transition-transform ease-in-out group-hover:transform group-hover:scale-110 text-center min-[1435px]:h-[54px] max-[1435px]:h-[34px]">
+      {{title | truncate:30}}</h1>
+    <p class="text-white mt-3 text-center text-wrap max-[1435px]:hidden">{{ description | truncate:80 }}</p>
+    <div class="flex flex-row min-[1435px]:mt-5 mt-3 justify-center">
+      <button *ngFor="let data of stackTech" class="p-2 bg-white shadow rounded-lg min-[1435px]:mx-2 mx-1">
+        <img [src]="data" alt="icon" class="min-[1435px]:w-6 min-[1435px]:h-6 max-[1435px]:w-3 max-[1435px]:h-3">
+      </button>
+    </div>
+    <a [routerLink]="link"
+      class="text-center min-[1435px]:mt-5 text-white min-[1435px]:text-sm text-xs hover:underline hover:underline-offset-4 hover:font-bold">
+      <p class="min-[1435px]:mt-5 mt-2">See more ></p>
+    </a>
+  </div>
+</div>

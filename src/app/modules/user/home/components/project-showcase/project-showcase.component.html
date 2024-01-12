@@ -1,13 +1,7 @@
 <div class="my-28 bg-blue-ocean">
-  <div class="flex flex-row place-content-center py-10">
-    <div class="text-center w-[380px]">
-      <h1 class="text-navy-ocean min-[1435px]:text-3xl text-2xl font-bold mb-1">Project Showcase</h1>
-      <p class="text-navy-ocean max-[1435px]:text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
-      </p>
-    </div>
-  </div>
+  <app-header-section [title]="'Project Showcase'" [darkColor]="'dark:text-navy-ocean'" [description]="'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'"></app-header-section>
 
+  <!-- carousel -->
   <!-- carousel -->
   <div id="carouselExampleCaptions" class="relative min-[1435px]:hidden" data-te-carousel-init data-te-ride="carousel">
     <!--Carousel items-->
@@ -18,123 +12,18 @@
         class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
         data-te-carousel-active data-te-carousel-item style="backface-visibility: hidden">
         <!-- card -->
-        <div class="bg-cover bg-center bg-opacity-50 group"
-          style="background-image: url(../../../../assets/project-showcase-1.jpg);">
-          <div class="h-72">
-          </div>
-          <div class="rounded-t-3xl bg-red-ocean opacity-90 p-8 h-64">
-            <h1
-              class="text-white font-bold text-2xl transition-transform ease-in-out group-hover:transform group-hover:scale-110 text-center min-[1435px]:h-[64px]">
-              Nex Knowledge Management</h1>
-            <p class="text-white mt-3 text-center text-wrap">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              Aenean commodo
-              ligula eget
-              dolor. Aenean massa. Cum
-              sociis
-              natoque penatibus et</p>
-            <a routerLink="/" class="text-center mt-5 text-white text-sm hover:underline hover:underline-offset-4 hover:font-bold"><p class="mt-5">See more ></p></a>
-          </div>
-        </div>
+        <app-card-project [title]="data[0].title" [description]="data[0].description"
+          [link]="data[0].link"></app-card-project>
         <!-- card -->
       </div>
 
       <!--Second item-->
-      <div
+      <div *ngFor="let subdata of data.slice(1, 5); let i = index"
         class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
         data-te-carousel-item style="backface-visibility: hidden">
         <!-- card -->
-        <div class="bg-cover bg-center bg-opacity-50 group"
-          style="background-image: url(../../../../assets/project-showcase-2.jpg);">
-          <div class="h-72">
-          </div>
-          <div class="rounded-t-3xl bg-navy-ocean opacity-90 p-8 h-64">
-            <h1
-              class="text-white font-bold text-2xl transition-transform ease-in-out group-hover:transform group-hover:scale-110 text-center min-[1435px]:h-[64px]">
-              Pusat Logistik Berikat</h1>
-            <p class="text-white mt-3 text-center text-wrap">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              Aenean commodo
-              ligula eget
-              dolor. Aenean massa. Cum
-              sociis
-              natoque penatibus et</p>
-            <a routerLink="/" class="text-center mt-5 text-white text-sm hover:underline hover:underline-offset-4 hover:font-bold"><p class="mt-5">See more ></p></a>
-          </div>
-        </div>
-        <!-- card -->
-      </div>
-
-      <!--Third item-->
-      <div
-        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-        data-te-carousel-item style="backface-visibility: hidden">
-        <!-- card -->
-        <div class="bg-cover bg-center bg-opacity-50 group cursor-pointer"
-          style="background-image: url(../../../../assets/project-showcase-1.jpg);">
-          <div class="h-72">
-          </div>
-          <div class="rounded-t-3xl bg-red-ocean opacity-90 p-8 h-64">
-            <h1
-              class="text-white font-bold text-2xl transition-transform ease-in-out group-hover:transform group-hover:scale-110 text-center min-[1435px]:h-[64px]">
-              SP Document</h1>
-            <p class="text-white mt-3 text-center text-wrap">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              Aenean commodo
-              ligula eget
-              dolor. Aenean massa. Cum
-              sociis
-              natoque penatibus et</p>
-            <a routerLink="/" class="text-center mt-5 text-white text-sm hover:underline hover:underline-offset-4 hover:font-bold"><p class="mt-5">See more ></p></a>
-          </div>
-        </div>
-        <!-- card -->
-      </div>
-
-      <!--four item-->
-      <div
-        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-        data-te-carousel-item style="backface-visibility: hidden">
-        <!-- card -->
-        <div class="bg-cover bg-center bg-opacity-50 group cursor-pointer"
-          style="background-image: url(../../../../assets/project-showcase-2.jpg);">
-          <div class="h-72">
-          </div>
-          <div class="rounded-t-3xl bg-navy-ocean opacity-90 p-8 h-64">
-            <h1
-              class="text-white font-bold text-2xl transition-transform ease-in-out group-hover:transform group-hover:scale-110 text-center min-[1435px]:h-[64px]">
-              GSMART</h1>
-            <p class="text-white mt-3 text-center text-wrap">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              Aenean commodo
-              ligula eget
-              dolor. Aenean massa. Cum
-              sociis
-              natoque penatibus et</p>
-            <a routerLink="/" class="text-center mt-5 text-white text-sm hover:underline hover:underline-offset-4 hover:font-bold"><p class="mt-5">See more ></p></a>
-          </div>
-        </div>
-        <!-- card -->
-      </div>
-
-      <!--five item-->
-      <div
-        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-        data-te-carousel-item style="backface-visibility: hidden">
-        <!-- card -->
-        <div class="bg-cover bg-center bg-opacity-50 group cursor-pointer"
-          style="background-image: url(../../../../assets/project-showcase-1.jpg);">
-          <div class="h-72">
-          </div>
-          <div class="rounded-t-3xl bg-red-ocean opacity-90 p-8 h-64">
-            <h1
-              class="text-white font-bold text-2xl transition-transform ease-in-out group-hover:transform group-hover:scale-110 text-center min-[1435px]:h-[64px]">
-              SDA Catalogue</h1>
-            <p class="text-white mt-3 text-center text-wrap">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              Aenean commodo
-              ligula eget
-              dolor. Aenean massa. Cum
-              sociis
-              natoque penatibus et</p>
-            <a routerLink="/" class="text-center mt-5 text-white text-sm hover:underline hover:underline-offset-4 hover:font-bold"><p class="mt-5">See more ></p></a>
-          </div>
-        </div>
+        <app-card-project [title]="subdata.title" [bgColor]="i % 2 === 0 ? 'bg-navy-ocean' : 'bg-red-ocean'"
+          [description]="subdata.description" [link]="subdata.link"></app-card-project>
         <!-- card -->
       </div>
     </div>
@@ -170,78 +59,8 @@
   <div class="grid min-[1435px]:grid-cols-5 max-[1435px]:grid-rows-5 gap-0 max-[1435px]:hidden">
 
     <!-- card -->
-    <div class="bg-cover bg-center bg-opacity-50 group"
-      style="background-image: url(../../../../assets/project-showcase-1.jpg);">
-      <div class="h-72">
-      </div>
-      <div class="rounded-t-3xl bg-red-ocean opacity-90 p-8 h-64">
-        <h1
-          class="text-white font-bold text-2xl transition-transform ease-in-out group-hover:transform group-hover:scale-110 text-center min-[1435px]:h-[64px]">
-          Nex Knowledge Management</h1>
-        <p class="text-white mt-3 text-center text-wrap">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget</p>
-        <a routerLink="/" class="text-center mt-5 text-white text-sm hover:underline hover:underline-offset-4 hover:font-bold"><p class="mt-5">See more ></p></a>
-      </div>
-    </div>
-    <!-- card -->
-
-    <!-- card -->
-    <div class="bg-cover bg-center bg-opacity-50 group"
-      style="background-image: url(../../../../assets/project-showcase-2.jpg);">
-      <div class="h-72">
-      </div>
-      <div class="rounded-t-3xl bg-navy-ocean opacity-90 p-8 h-64">
-        <h1
-          class="text-white font-bold text-2xl transition-transform ease-in-out group-hover:transform group-hover:scale-110 text-center min-[1435px]:h-[64px]">
-          Pusat Logistik Berikat</h1>
-        <p class="text-white mt-3 text-center text-wrap">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget</p>
-        <a routerLink="/" class="text-center mt-5 text-white text-sm hover:underline hover:underline-offset-4 hover:font-bold"><p class="mt-5">See more ></p></a>
-      </div>
-    </div>
-    <!-- card -->
-
-    <!-- card -->
-    <div class="bg-cover bg-center bg-opacity-50 group"
-      style="background-image: url(../../../../assets/project-showcase-1.jpg);">
-      <div class="h-72">
-      </div>
-      <div class="rounded-t-3xl bg-red-ocean opacity-90 p-8 h-64">
-        <h1
-          class="text-white font-bold text-2xl transition-transform ease-in-out group-hover:transform group-hover:scale-110 text-center min-[1435px]:h-[64px]">
-          SP Document</h1>
-        <p class="text-white mt-3 text-center text-wrap">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget</p>
-        <a routerLink="/" class="text-center mt-5 text-white text-sm hover:underline hover:underline-offset-4 hover:font-bold"><p class="mt-5">See more ></p></a>
-      </div>
-    </div>
-    <!-- card -->
-
-    <!-- card -->
-    <div class="bg-cover bg-center bg-opacity-50 group"
-      style="background-image: url(../../../../assets/project-showcase-2.jpg);">
-      <div class="h-72">
-      </div>
-      <div class="rounded-t-3xl bg-navy-ocean opacity-90 p-8 h-64">
-        <h1
-          class="text-white font-bold text-2xl transition-transform ease-in-out group-hover:transform group-hover:scale-110 text-center min-[1435px]:h-[64px]">
-          GSMART</h1>
-        <p class="text-white mt-3 text-center text-wrap">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget</p>
-        <a routerLink="/" class="text-center mt-5 text-white text-sm hover:underline hover:underline-offset-4 hover:font-bold"><p class="mt-5">See more ></p></a>
-      </div>
-    </div>
-    <!-- card -->
-
-    <!-- card -->
-    <div class="bg-cover bg-center bg-opacity-50 group"
-      style="background-image: url(../../../../assets/project-showcase-1.jpg);">
-      <div class="h-72">
-      </div>
-      <div class="rounded-t-3xl bg-red-ocean opacity-90 p-8 h-64">
-        <h1
-          class="text-white font-bold text-2xl transition-transform ease-in-out group-hover:transform group-hover:scale-110 text-center min-[1435px]:h-[64px]">
-          SDA Catalogue</h1>
-        <p class="text-white mt-3 text-center text-wrap">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget</p>
-        <a routerLink="/" class="text-center mt-5 text-white text-sm hover:underline hover:underline-offset-4 hover:font-bold"><p class="mt-5">See more ></p></a>
-      </div>
-    </div>
+        <app-card-project *ngFor="let subdata of data.slice(0, 5); let i = index" [title]="subdata.title" [bgColor]="i % 2 === 0 ? 'bg-navy-ocean' : 'bg-red-ocean'"
+          [description]="subdata.description" [link]="subdata.link"></app-card-project>
     <!-- card -->
 
   </div>

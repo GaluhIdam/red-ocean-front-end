@@ -7,6 +7,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { WebsiteComponent } from './components/website/website.component';
 import { MobileComponent } from './components/mobile/mobile.component';
 import { SwiperModule } from 'swiper/angular';
+import { SharedModule } from 'src/app/shared/components/shared.module';
 
 
 @NgModule({
@@ -16,6 +17,6 @@ import { SwiperModule } from 'swiper/angular';
     WebsiteComponent,
     MobileComponent,
   ],
-  imports: [CommonModule, ProjectRoutingModule, SwiperModule],
+  imports: [CommonModule, ProjectRoutingModule, SwiperModule, SharedModule],
 })
 export class ProjectModule {}
