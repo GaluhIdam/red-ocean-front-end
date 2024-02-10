@@ -1,0 +1,8 @@
+<div *ngIf="loading" class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-white dark:bg- z-50">
+  <img *ngIf="animate === null" src="../../../../assets/RedOcean.png" class="w-40 animate__animated animate__bounceIn"
+    alt="logo">
+  <img *ngIf="animate === true" src="../../../../assets/RedOcean.png" class="w-40 animate__animated animate__rubberBand"
+    alt="logo">
+  <img *ngIf="animate === false" src="../../../../assets/RedOcean.png" class="w-40 animate__animated animate__bounceOut"
+    alt="logo">
+</div>

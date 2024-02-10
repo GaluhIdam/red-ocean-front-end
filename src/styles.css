@@ -1,5 +1,6 @@
 /* TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com */
-@import 'swiper/css/bundle';
+@import "~animate.css/animate.min";
+@import "swiper/css/bundle";
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap");
 @tailwind base;
 
@@ -15,4 +16,4 @@
 
 @tailwind components;
 @tailwind utilities;
-@import '~@fortawesome/fontawesome-free/css/all.css';
+@import "~@fortawesome/fontawesome-free/css/all.css";

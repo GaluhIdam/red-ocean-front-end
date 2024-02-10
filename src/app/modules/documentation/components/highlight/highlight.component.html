@@ -1,0 +1,73 @@
+<div class="grid grid-cols-3 gap-2 mt-28 mb-12">
+  <div class="flex flex-col col-span-2 mr-14">
+    <img class="rounded-lg object-cover object-center w-full h-[600px]"
+      src="../../../../../../assets/project-showcase-2.jpg" alt="image">
+    <div class="my-5">
+      <p class="font-bold dark:text-white mb-2">Saturday, November 11 2023</p>
+      <p class="text-primary mb-2 text-lg font-bold"><fa-icon [icon]="faCheckCircle"></fa-icon> Editor Choice</p>
+      <h1 class="text-4xl text-red-ocean font-bold">
+        What’s NestJs Framework?, It’s better then ExpressJs?
+      </h1>
+      <p class="dark:text-white">
+        Lorem ipsum, atau ringkasnya lipsum, adalah teks standar yang ditempatkan untuk mendemostrasikan elemen grafis
+        atau
+        presentasi visual seperti font, tipografi, dan tata letak.
+      </p>
+    </div>
+  </div>
+  <div class="w-full">
+    <div>
+      <img class="rounded-lg object-cover object-center w-full h-[300px]"
+        src="../../../../../../assets/project-showcase-2.jpg" alt="image">
+      <div class="my-5">
+        <p class="text-sm font-bold dark:text-white mb-2">Saturday, November 11 2023</p>
+        <p class="text-primary mb-2 text-md font-bold"><fa-icon [icon]="faCheckCircle"></fa-icon> Editor Choice</p>
+        <h1 class="text-xl text-red-ocean font-bold">
+          What’s NestJs Framework?, It’s better then ExpressJs?
+        </h1>
+        <p class="dark:text-white text-sm">
+          Lorem ipsum, atau ringkasnya lipsum, adalah teks standar yang ditempatkan untuk mendemostrasikan elemen grafis
+          atau
+          presentasi visual seperti font, tipografi, dan tata letak.
+        </p>
+      </div>
+    </div>
+    <div>
+      <img class="rounded-lg object-cover object-center w-full h-[300px]"
+        src="../../../../../../assets/project-showcase-2.jpg" alt="image">
+      <div class="my-5">
+        <p class="text-sm font-bold dark:text-white mb-2">Saturday, November 11 2023</p>
+        <p class="text-primary mb-2 text-md font-bold"><fa-icon [icon]="faCheckCircle"></fa-icon> Editor Choice</p>
+        <h1 class="text-xl text-red-ocean font-bold">
+          What’s NestJs Framework?, It’s better then ExpressJs?
+        </h1>
+        <p class="dark:text-white text-sm">
+          Lorem ipsum, atau ringkasnya lipsum, adalah teks standar yang ditempatkan untuk mendemostrasikan elemen grafis
+          atau
+          presentasi visual seperti font, tipografi, dan tata letak.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flex flex-row rounded-xl bg-red-ocean p-8 shadow">
+  <div class="w-full mr-8">
+    <img src="../../../../../../assets/project-hero.png" alt="image" class="object-center object-cover w-full h-44">
+  </div>
+  <div>
+    <h1 class="text-white text-3xl mb-2 font-bold">Everyone can fly</h1>
+    <p class="text-white">Lorem ipsum, atau ringkasnya lipsum, adalah teks standar yang ditempatkan untuk
+      mendemostrasikan elemen grafis
+      atau
+      presentasi visual seperti font, tipografi, dan tata letak.</p>
+    <button type="button" class="bg-white text-red-ocean rounded-full px-5 py-2 shadow font-bold mt-3">Click
+      Here</button>
+  </div>
+</div>
+
+
+  <div class="min-[1435px]:grid min-[1435px]:grid-cols-2 min-[1435px]:gap-4 max-[1435px]:flex max-[1435px]:flex-col mt-14">
+    <app-card-article *ngFor="let data of article" [date]="data.date" [image]="data.image" [title]="data.title"
+      [description]="data.description"></app-card-article>
+  </div>

@@ -11,21 +11,24 @@ const routes: Routes = [
     path: 'home',
     data: { title: 'Home' },
     loadChildren: () =>
-      import('./modules/user/home/home.module').then((m) => m.HomeModule),
+      import('./modules/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'project',
     loadChildren: () =>
-      import('./modules/user/project/project.module').then(
-        (m) => m.ProjectModule
-      ),
+      import('./modules/project/project.module').then((m) => m.ProjectModule),
   },
   {
     path: 'documentation',
     loadChildren: () =>
-      import('./modules/user/documentation/documentation.module').then(
+      import('./modules/documentation/documentation.module').then(
         (m) => m.DocumentationModule
       ),
+  },
+  {
+    path: 'about',
+    loadChildren: () =>
+      import('./modules/about/about.module').then((m) => m.AboutModule),
   },
 ];
 

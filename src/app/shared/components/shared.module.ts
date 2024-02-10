@@ -7,6 +7,7 @@ import { HeaderSectionComponent } from './header-section/header-section.componen
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { TruncatePipe } from 'src/app/core/utilities/truncate.pipe';
 import { RouterModule } from '@angular/router';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { RouterModule } from '@angular/router';
     CardProjectStackComponent,
     HeaderSectionComponent,
     TruncatePipe,
+    LoadingComponent,
   ],
   exports: [
     CardArticleComponent,
@@ -22,6 +24,7 @@ import { RouterModule } from '@angular/router';
     CardProjectStackComponent,
     HeaderSectionComponent,
     TruncatePipe,
+    LoadingComponent,
   ],
   imports: [CommonModule, RouterModule],
 })
